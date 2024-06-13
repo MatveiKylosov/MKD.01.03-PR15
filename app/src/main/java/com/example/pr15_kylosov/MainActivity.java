@@ -56,4 +56,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void recordStop(View v) {
+        if (mediaRecorder != null) {
+            mediaRecorder.stop();
+        }
+    }
 }
