@@ -24,6 +24,7 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/recordStartButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="recordStart"
@@ -31,6 +32,7 @@
                 android:layout_marginRight="20dp"/>
 
             <Button
+                android:id="@+id/recordStopButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="recordStop"
@@ -48,6 +50,7 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/playStartButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="playStart"
@@ -55,11 +58,22 @@
                 android:text="Старт"/>
 
             <Button
+                android:id="@+id/playStopButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="playStop"
                 android:text="Стоп"/>
 
         </LinearLayout>
+
+        <EditText
+            android:id="@+id/fileNameInput"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:hint="Введите название файла"
+            android:inputType="text"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
+
 </FrameLayout>
