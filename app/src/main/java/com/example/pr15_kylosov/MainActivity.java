@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
             // Получаем имя файла из EditText
             String inputFileName = fileNameInput.getText().toString();
 
+
             // Проверяем, пустое ли поле
             if (inputFileName.isEmpty()) {
                 Toast.makeText(this, "Имя файла не должно быть пустым", Toast.LENGTH_SHORT).show();
