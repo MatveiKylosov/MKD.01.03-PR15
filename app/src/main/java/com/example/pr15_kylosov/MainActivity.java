@@ -123,8 +123,21 @@ public class MainActivity extends AppCompatActivity {
         try {
             releasePlayer();
             mediaPlayer = new MediaPlayer();
+
+            // Получаем имя файла из EditText
             String inputFileName = fileNameInput.getText().toString();
-            mediaPlayer.setDataSource(inputFileName);
+
+            // Проверяем, пустое ли поле
+            if (inputFileName.isEmpty()) {
+                Toast.makeText(this, "Имя файла не должно быть пустым", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Создаем полный путь к файлу
+            String fullPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) + "/" + inputFileName + ".3gpp";
+
+            // Устанавливаем путь к файлу
+            mediaPlayer.setDataSource(fullPath);
             mediaPlayer.prepare();
             mediaPlayer.start();
         } catch (Exception ex) {
